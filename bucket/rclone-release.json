@@ -1,0 +1,65 @@
+{
+    "version": "v1_20221024",
+    "description": "rclone 改版，兼容支持 115 网盘，对比 115drive-webdav 功能更强大，支持 WebDav 服务，本地磁盘挂载，文件批量下载到本地等功能。",
+    "homepage": "https://github.com/gaoyb7/rclone-release/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gaoyb7/rclone-release/releases/download/v1_20221024/rclone_v1_20221024_Windows_x86_64.tar.gz",
+            "hash": "68f21fbc185e56f86ba00faef44a0ad3716e69db92d8031b87deca091255b8c1"
+        },
+        "32bit": {
+            "url": "https://github.com/gaoyb7/rclone-release/releases/download/v1_20221024/rclone_v1_20221024_Windows_i386.tar.gz",
+            "hash": "0bbeefb4fe3f5717da6ecfcb2e655fc694641c1f745faa9d2afd048d175273dd"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\rclone.conf\") -or !(Get-Item \"$persist_dir\\rclone.conf\").Length) {",
+        "   New-Item \"$persist_dir\\rclone.conf\" -ItemType File -Force | Out-Null",
+        "",
+        "   $tilde = if ($env:HOME) {",
+        "       $env:HOME",
+        "   } elseif ($env:USERPROFILE) {",
+        "       $env:USERPROFILE",
+        "   } else {",
+        "       \"$env:HOMEDRIVE%\\$env:HOMEPATH\"",
+        "   }",
+        "",
+        "   $importConf = if (Test-Path \"$env:APPDATA\\rclone\\rclone.conf\") {",
+        "       \"$env:APPDATA\\rclone\\rclone.conf\"",
+        "   } elseif (Test-Path \"$env:XDG_CONFIG_HOME\\rclone\\rclone.conf\") {",
+        "       \"$env:XDG_CONFIG_HOME\\rclone\\rclone.conf\"",
+        "   } elseif (Test-Path \"$tilde\\.config\\rclone\\rclone.conf\") {",
+        "       \"$tilde\\.config\\rclone\\rclone.conf\"",
+        "   } elseif (Test-Path \"$tilde\\.rclone.conf\") {",
+        "       \"$tilde\\.rclone.conf\"",
+        "   }",
+        "",
+        "   if ($importConf -and (Test-Path $importConf)) {",
+        "       Copy-Item $importConf \"$persist_dir\\rclone.conf\"",
+        "       Write-Host \"Imported existing rclone.conf from $importConf.\" -ForegroundColor Yellow",
+        "   }",
+        "}"
+    ],
+    "uninstaller": {
+        "script": "if ((Test-Path \"$dir\\rclone.conf\") -and !(Get-Item \"$dir\\rclone.conf\").LinkType -and (Test-Path $persist_dir)) { Copy-Item \"$dir\\rclone.conf\" $persist_dir }"
+    },
+    "bin": "rclone.exe",
+    "persist": "rclone.conf",
+    "checkver": {
+        "github": "https://github.com/gaoyb7/rclone-release"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gaoyb7/rclone-release/releases/download/$version/rclone_$version_Windows_x86_64.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/gaoyb7/rclone-release/releases/download/$version/rclone_$version_Windows_i386.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
