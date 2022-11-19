@@ -19,3 +19,9 @@ rclone-release
 ```shell
 scoop install scoop/rclone-release
 ```
+
+tencent-meeting
+
+```shell
+scoop install scoop/tencent-meeting
+```
