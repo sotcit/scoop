@@ -11,16 +11,8 @@
         }
     },
     "bin": "BaiduPCS-Go.exe",
-    "shortcuts": [
-        [
-            "BaiduPCS-Go.exe",
-            "BaiduPCS-Go"
-        ]
-    ],
-    "persist": [
-        "config",
-        "Downloads"
-    ],
+    "shortcuts": [["BaiduPCS-Go.exe", "BaiduPCS-Go"]],
+    "persist": ["config", "Downloads"],
     "env_set": {
         "BAIDUPCS_GO_CONFIG_DIR": "$dir\\config",
         "BAIDUPCS_GO_DOWNLOAD_DIR": "$dir\\Downloads"
