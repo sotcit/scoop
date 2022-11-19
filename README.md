@@ -8,7 +8,7 @@ scoop bucket add scoop https://github.com/sotcit/scoop.git
 
 ## 安装软件
 
-BaiduPCS-Go
+baidupcs-go
 
 ```shell
 scoop install scoop/baidupcs-go
