@@ -14,12 +14,6 @@ baidupcs-go
 scoop install scoop/baidupcs-go
 ```
 
-rclone-release
-
-```shell
-scoop install scoop/rclone-release
-```
-
 tencent-meeting
 
 ```shell
