@@ -25,3 +25,9 @@ prismlauncher
 ```shell
 scoop install scoop/prismlauncher
 ```
+
+aliyunpan
+
+```shell
+scoop install scoop/aliyunpan
+```
