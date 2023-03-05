@@ -20,12 +20,6 @@ tencent-meeting
 scoop install scoop/tencent-meeting
 ```
 
-prismlauncher
-
-```shell
-scoop install scoop/prismlauncher
-```
-
 aliyunpan
 
 ```shell
