@@ -31,3 +31,9 @@ aliyunpan
 ```shell
 scoop install scoop/aliyunpan
 ```
+
+he3
+
+```shell
+scoop install scoop/he3
+```
