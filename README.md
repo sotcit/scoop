@@ -26,8 +26,8 @@ aliyunpan
 scoop install scoop/aliyunpan
 ```
 
-he3
+wechat-np
 
 ```shell
-scoop install scoop/he3
+scoop install scoop/wechat-np
 ```
