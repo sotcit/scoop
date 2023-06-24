@@ -31,3 +31,9 @@ wechat-np
 ```shell
 scoop install scoop/wechat-np
 ```
+
+Optimizer
+
+```shell
+scoop install scoop/optimizer
+```
