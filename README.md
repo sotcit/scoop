@@ -32,8 +32,8 @@ wechat-np
 scoop install scoop/wechat-np
 ```
 
-Optimizer
+365
 
 ```shell
-scoop install scoop/optimizer
+scoop install scoop/365
 ```
