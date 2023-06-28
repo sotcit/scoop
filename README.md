@@ -25,3 +25,9 @@ scoop install scoop/aliyunpan
 ```shell
 scoop install scoop/365
 ```
+
+he3
+
+```shell
+scoop install scoop/he3
+```
