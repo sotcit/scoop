@@ -31,3 +31,9 @@ he3
 ```shell
 scoop install scoop/he3
 ```
+
+lx-music
+
+```shell
+scoop install scoop/lx-music
+```
