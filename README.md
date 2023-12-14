@@ -25,3 +25,9 @@ hoppscotch
 ```shell
 scoop install scoop/hoppscotch
 ```
+
+clash-nyanpasu-portable
+
+```shell
+scoop install scoop/clash-nyanpasu-portable
+```
