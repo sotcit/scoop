@@ -31,3 +31,9 @@ clash-nyanpasu-portable
 ```shell
 scoop install scoop/clash-nyanpasu-portable
 ```
+
+watttoolkit
+
+```shell
+scoop install scoop/watttoolkit
+```
