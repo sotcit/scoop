@@ -12,14 +12,5 @@
       "hash": "6700b914e70a677e38498a34a8f7fe8c1b647be37757f7f74c56c98b9f7e130a"
     }
   },
-  "installer": {
-    "script": [
-      "ensure \"$persist_dir\" | Out-Null",
-      "New-Item \"$env:LOCALAPPDATA\\moe.elaina.clash.nyanpasu\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
-    ]
-  },
-  "uninstaller": {
-    "script": "Remove-Item \"$env:LOCALAPPDATA\\moe.elaina.clash.nyanpasu\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
-  },
   "shortcuts": [["Clash Nyanpasu.exe", "Clash Nyanpasu"]]
 }
