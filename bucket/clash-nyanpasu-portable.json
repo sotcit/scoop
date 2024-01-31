@@ -12,5 +12,6 @@
       "hash": "4b0e6e3ae296f321091be2d0441c351bcf199084d746d62462829dc8103aff5d"
     }
   },
-  "shortcuts": [["Clash Nyanpasu.exe", "Clash Nyanpasu"]]
+  "shortcuts": [["Clash Nyanpasu.exe", "Clash Nyanpasu"]],
+  "persist": [".config"]
 }
